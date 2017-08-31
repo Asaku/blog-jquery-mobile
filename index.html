@@ -1,9 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-	<title></title>
+	<title>Blog Jquery</title>
+	<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	<!-- Start of first page -->
+	<div data-role="page" id="foo">
+		<div data-role="header">
+			<h1>Foo</h1>
+		</div><!-- /header -->
+		<div role="main" class="ui-content">
+			<p>I'm first in the source order so I'm shown as the page.</p>
+			<p>View internal page called <a href="#bar">bar</a></p>
+		</div><!-- /content -->
 
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	<!-- Start of second page -->
+	<div data-role="page" id="bar">
+		<div data-role="header">
+			<h1>Bar</h1>
+		</div><!-- /header -->
+		<div role="main" class="ui-content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+			<p><a href="#foo">Back to foo</a></p>
+		</div><!-- /content -->
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
